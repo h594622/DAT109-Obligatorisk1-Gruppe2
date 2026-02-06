@@ -30,7 +30,7 @@ public class Spiller {
     public void spillTur(Brett brett, Terning terning) {
 
         int steg;
-        int gammelPos = brikke.getPosition();
+        int gammelPos = brikke.getPosisjon();
         int antallSeksere = 0;
 
         do {
@@ -40,7 +40,7 @@ public class Spiller {
             System.out.println(
                     navn + " trillet " + steg +
                             " og flyttet fra " + gammelPos +
-                            " til " + brikke.getPosition()
+                            " til " + brikke.getPosisjon()
             );
             if (steg == 6) {
                 antallSeksere++;

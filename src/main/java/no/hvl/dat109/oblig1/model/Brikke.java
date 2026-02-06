@@ -7,7 +7,7 @@ public class Brikke {
     public Brikke(int startPosisjon) { this.posisjon = startPosisjon;
     }
 
-    public int getPosition() { return posisjon;
+    public int getPosisjon() { return posisjon;
     }
 
     /**
@@ -32,7 +32,7 @@ public class Brikke {
         Rute rute = brett.hentRute(nyPosisjon);
 
         if (rute.getType() == RuteType.SLANGE || rute.getType() == RuteType.STIGE) {
-            nyPosisjon = rute.destinasjon;
+            posisjon = rute.destinasjon;
         } else {
             posisjon = nyPosisjon;
         }

@@ -23,12 +23,12 @@ public class Spill {
     public void start() {
         while(!erFerdig()) {
             spillTur();
+            nesteSpiller();
         }
     }
 
     public void spillTur() {
         spillere.get(aktivSpiller).spillTur(brett, terning);
-        nesteSpiller();
     }
 
     // Metoden setter neste spiller
