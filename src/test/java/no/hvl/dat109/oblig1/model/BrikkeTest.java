@@ -6,6 +6,14 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Tester funksjonaliteten til Brikke.
+ * Inneholder enhetstester for om brikken flytter seg normal, ikke beveger seg forbi 100 og om brikken flytter seg ved stige.
+ *
+ *  * @author Gruppe2
+ *  * @version 1.0
+ *  * @since 2026-02-06
+ *  */
 class BrikkeTest {
 
     @Test

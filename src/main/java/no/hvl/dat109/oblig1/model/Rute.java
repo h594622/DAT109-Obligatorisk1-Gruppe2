@@ -1,5 +1,14 @@
 package no.hvl.dat109.oblig1.model;
 
+/**
+ * Representerer en rute på brettet.
+ * Ruten kan være normal, stige eller slange.
+ *
+ * @author Gruppe2
+ * @version 1.0
+ * @since 2026-02-06
+ */
+
 public class Rute {
 
     public final int id;

@@ -1,5 +1,13 @@
 package no.hvl.dat109.oblig1.model;
 
+/**
+ * Representerer en brikke, som er eid av en Spiller.
+ * Har ansvar for å flytte brikken og gi posisjon.
+ *
+ * @author Gruppe2
+ * @version 1.0
+ * @since 2026-02-06
+ */
 public class Brikke {
 
     public int posisjon;
@@ -8,6 +16,10 @@ public class Brikke {
     }
 
     public int getPosisjon() { return posisjon;
+    }
+
+    public void setPosisjon(int i) {
+        posisjon = i;
     }
 
     /**

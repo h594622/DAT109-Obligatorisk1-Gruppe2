@@ -1,5 +1,6 @@
 package no.hvl.dat109.oblig1.ui;
 import no.hvl.dat109.oblig1.game.Spill;
+import no.hvl.dat109.oblig1.game.Terning;
 import no.hvl.dat109.oblig1.model.Brett;
 import no.hvl.dat109.oblig1.model.Spiller;
 import no.hvl.dat109.oblig1.data.RuteDAO;
@@ -21,7 +22,8 @@ public class Main {
         );
 
         // 3. Start spillet
-        Spill spill = new Spill(brett, spillere);
+        Terning terning = new Terning();
+        Spill spill = new Spill(brett, spillere, terning);
         spill.start();
     }
 }

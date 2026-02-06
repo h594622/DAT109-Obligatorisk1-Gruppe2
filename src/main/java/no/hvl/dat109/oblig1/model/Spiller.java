@@ -2,6 +2,15 @@ package no.hvl.dat109.oblig1.model;
 
 import no.hvl.dat109.oblig1.game.Terning;
 
+/**
+ * Representerer en spiller av spillet.
+ * Inneholder navn og brikke. Og har ansvar for å spille sin tur.
+ *
+ * @author Gruppe2
+ * @version 1.0
+ * @since 2026-02-06
+ */
+
 public class Spiller {
 
     private String navn;
@@ -30,21 +39,44 @@ public class Spiller {
     public void spillTur(Brett brett, Terning terning) {
 
         int steg;
-        int gammelPos = brikke.getPosisjon();
         int antallSeksere = 0;
 
         do {
-            steg = terning.trill();
-            brikke.flytt(steg, brett);
 
-            System.out.println(
-                    navn + " trillet " + steg +
-                            " og flyttet fra " + gammelPos +
-                            " til " + brikke.getPosisjon()
-            );
+            int gammelPos = brikke.getPosisjon();
+
+            steg = terning.trill();
+
+            int nyPos = gammelPos + steg;
+
+            // Hvis man går over 100 → ikke flytt
+            if (nyPos > 100) {
+
+                System.out.println(
+                        navn + " trillet " + steg +
+                                ", men kan ikke gå over 100."
+                );
+
+            } else {
+
+                Rute rute = brett.hentRute(nyPos);
+
+                brikke.flytt(steg, brett);
+
+                String type = rute.getType().toString().toLowerCase();
+
+                System.out.println(
+                        navn + " trillet " + steg +
+                                " og landet på " + type +
+                                ". Flytter fra " + gammelPos +
+                                " til " + brikke.getPosisjon() + "."
+                );
+            }
+
             if (steg == 6) {
                 antallSeksere++;
             }
+
         } while (steg == 6 && antallSeksere < 3);
     }
 

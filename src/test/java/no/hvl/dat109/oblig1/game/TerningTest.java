@@ -1,10 +1,18 @@
 package no.hvl.dat109.oblig1.game;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tester funksjonaliteten til Terning.
+ * Inneholder enhetstester for trill terning.
+ *
+ *  * @author Gruppe2
+ *  * @version 1.0
+ *  * @since 2026-02-06
+ *  */
 public class TerningTest {
-    @org.junit.Test
+
     @Test
     public void testTrill() {
         Terning terning = new Terning();

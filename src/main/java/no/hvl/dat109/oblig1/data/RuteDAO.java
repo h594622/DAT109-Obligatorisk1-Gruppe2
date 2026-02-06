@@ -6,6 +6,14 @@ import no.hvl.dat109.oblig1.model.RuteType;
 import java.sql.*;
 import java.util.*;
 
+/**
+ * Ansvarlig for å hente brettet fra databasen og konvertere denne til Rute-objekter.
+ *
+ * @author Gruppe2
+ * @version 1.0
+ * @since 2026-02-06
+ */
+
 public class RuteDAO {
 
     private final String url = "jdbc:postgresql://localhost:5432/brettspill";
